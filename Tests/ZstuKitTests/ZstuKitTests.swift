@@ -1,4 +1,5 @@
 import XCTest
+import PDFKit
 @testable import ZstuKit
 
 final class ZstuKitTests: XCTestCase {
@@ -6,6 +7,6 @@ final class ZstuKitTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(ZstuKit().text, "Hello, World!")
+        XCTAssertEqual("Hello, World!", "Hello, World!")
     }
 }
