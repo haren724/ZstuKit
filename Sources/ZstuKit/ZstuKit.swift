@@ -1,14 +1,8 @@
 import Foundation
 
-public protocol ZKSsoAuthDelegate {
-    func login() async
-}
-
-public class ZKSsoAuthUser {
+public class ZKSsoUserData {
     public var username: String
     public var password: String
-    
-    private(set) var delegate: ZKSsoAuthDelegate?
     
     init(username: String, password: String) {
         self.username = username
@@ -18,6 +12,22 @@ public class ZKSsoAuthUser {
     init(_ username: String, _ password: String) {
         self.username = username
         self.password = password
+    }
+}
+
+public class ZKSsoAuthSession {
+    private(set) var userData: ZKSsoUserData
+    
+    init(userData: ZKSsoUserData) {
+        self.userData = userData
+    }
+    
+    init(_ userData: ZKSsoUserData) {
+        self.userData = userData
+    }
+    
+    public func login() async {
+        
     }
 }
 
